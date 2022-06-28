@@ -1,0 +1,11 @@
+--- fetchmail-6.4.30/imap.c	2021-10-31 14:54:24.000000000 +0300
++++ fetchmail-6.4.30/imap-less-timeout.c	2022-06-28 17:32:00.417940442 +0300
+@@ -793,7 +793,7 @@
+ 	/* special timeout to terminate the IDLE and re-issue it
+ 	 * at least every 28 minutes:
+ 	 * (the server may have an inactivity timeout) */
+-	mytimeout = idle_timeout = 1680; /* 28 min */
++	mytimeout = idle_timeout = 600; /* 10 min for Gmail */
+ 	time(&idle_start_time);
+ 	stage = STAGE_IDLE;
+ 	/* enter IDLE mode */
