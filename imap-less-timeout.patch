@@ -5,7 +5,7 @@
  	 * at least every 28 minutes:
  	 * (the server may have an inactivity timeout) */
 -	mytimeout = idle_timeout = 1680; /* 28 min */
-+	mytimeout = idle_timeout = 360; /* 6 min for Gmail */
++	mytimeout = idle_timeout = 300; /* 5 min for Gmail */
  	time(&idle_start_time);
  	stage = STAGE_IDLE;
  	/* enter IDLE mode */
